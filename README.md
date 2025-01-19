@@ -21,4 +21,9 @@ Usage of server
 - 孙-倪定律用于表示非线性的加速比实现  
 - <<<grid ,block>>>
 - Dim是个数，Idx是序列数
-- 
+- 原则上来说grid之间应该是不互通数据的，因此申请share可以互通
+- 对于thread的计算就是利用for循环进行分配的！
+- 规约含有交叉规约、交错规约、warp 和block reduce
+- kernel里面的局部变量是存储在寄存器中
+- 计算仿存比增加，那么kernel的时间就会减少
+- float4是一种内在的数据类型，它能够连续存储四个float，因此能仿问次数
